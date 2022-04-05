@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!-- bootstrap css -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <script src="https://unpkg.com/vue@3"></script>
+ <!-- main css -->
+ <link rel="stylesheet" href="css/main.css">
+ <!-- google fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+ <!-- font awesome -->
+ <script src="js/all.js"></script>
+ <title>Counter Project</title>
+ <style>
+ </style>
+</head>
+
+<body id="app">
+
+
+ <div class="container">
+  <div class="row max-height align-items-center">
+   <div class="col-10 mx-auto col-md-6 text-center main-container p-5">
+    <h1 class="text-uppercase">counter</h1>
+    <h1 :class="{'text-success':counter>0,'text-danger':counter<0}" id="counter">{{counter}}</h1>
+    <div class="btn-container d-flex justify-content-around flex-wrap">
+     <button @click="oneMore(-1)" class="btn counterBtn prevBtn text-uppercase m-2">lower count</button>
+     <button @click="oneMore(1)" class="btn counterBtn nextBtn text-uppercase m-2">add count</button>
+    </div>
+   </div>
+  </div>
+ </div>
+
+
+
+
+
+ <!-- script js -->
+ <script src="js/app.js"></script>
+</body>
+
+</html>
